@@ -12,7 +12,7 @@ namespace StacknQueue
         public Node (T data)
         {
             this.Data = data;
-            Next = null; //Sets the next node as null 
+            //Next = null; //Sets the next node as null 
         }
         
     }

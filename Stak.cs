@@ -11,11 +11,12 @@ namespace StacknQueue
             // implement adding to the stack
             //Allocate Memory for new node 
             //Add the data 
-            
-            Node<T> MyPush = new Node<T>(data); 
-            top.Data = data; 
-            top = top.Next; 
-            
+            Console.WriteLine("Element to be added: "+data); //FOR TESTING TO SEE IF ELEMENT TO BE ADDED IS RIGHT 
+
+            Node<T>? TopNow = top; //defines a temp variable that is the Current Top of the stack  
+            top = new Node<T>(data){Next = TopNow}; 
+            // declares the new node as the top and Sets Next as the node that was previously at the top of the stack
+           
 
 
         }
@@ -36,10 +37,12 @@ namespace StacknQueue
         public void printMystack(){ //METHOD TO PRINT THE STACK (FOR TESTING PURPOSES) TO BE TESTED IF THIS WORKS 
             Node<T>? current = top; 
             while(current != null){
+                    
                     Console.WriteLine(current.Data);
                     current = current.Next;
             }
         }
+      
     }
     
 }
