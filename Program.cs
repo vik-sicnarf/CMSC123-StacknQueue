@@ -3,11 +3,13 @@
 using StacknQueue; 
 Console.WriteLine("Hello, World!");
 Stak<String> mytesty = new Stak<String>();
+mytesty.Peek(); 
 mytesty.Push("HELP");
 mytesty.Push("OMG");
 mytesty.Push("IS");
 mytesty.Push("IT");
 mytesty.Push("WORKING????");
 mytesty.printMystack(); 
+mytesty.Peek(); 
 
 
