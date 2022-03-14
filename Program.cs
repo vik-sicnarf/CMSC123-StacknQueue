@@ -9,7 +9,10 @@ mytesty.Push("OMG");
 mytesty.Push("IS");
 mytesty.Push("IT");
 mytesty.Push("WORKING????");
+mytesty.Peek();
 mytesty.printMystack(); 
+mytesty.Pop();
 mytesty.Peek(); 
+
 
 

@@ -16,17 +16,30 @@ namespace StacknQueue
             Node<T>? TopNow = top; //defines a temp variable node that is the Current Top of the stack  
 
             // declares the new node as the top and Sets Next as the node that was previously at the top of the stack
-            top = new Node<T>(data){Next = TopNow}; 
+            top = new Node<T>(data)
+            {
+                Next = TopNow    
+            }; 
             
-           
-
 
         }
 
-        public void /*T*/ Pop() //void return type for now. change to T when done implementing 
+        public T Pop() //void return type for now. change to T when done implementing 
         {
-            // implement deleting from the stack
-            //return null;
+            //Implement removing element from the top of the stack
+
+            //Exception handling for pop when the stack is empty
+            try {
+                T data = top.Data; 
+                top = top.Next;
+                return data;
+            }catch(NullReferenceException e){ //Catches the exception when the stack is empty and returns null
+                Console.WriteLine("The stack is empty");
+                return default(T); //returns null
+            }
+                
+    
+            
         }
 
         public T Peek() //void return type for now. change to T when done implementing 
