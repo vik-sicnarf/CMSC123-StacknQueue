@@ -40,12 +40,13 @@ namespace StacknQueue
         public T Peek() //Peeking from the top of the stack
         {
             //Exception handling for peeking when the stack is empty
-            try{ //Returns the top element since the stack is not empty 
-                Console.WriteLine("Peeking the stack the element at top is: " + top.Data);
+
+            if(top != null){
+                Console.WriteLine("Peeking the stack the element at the top is: " + top.Data);
                 return top.Data; 
-            }catch(NullReferenceException e){ //Catches the exception when the stack is empty and returns null
+            }else{
                 Console.WriteLine("Peeking the stack the element at top is empty");
-                return default(T); //returns null
+                return default(T); 
             }
         }
 

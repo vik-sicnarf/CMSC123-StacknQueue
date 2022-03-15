@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //This is basically the Main method in C# i think 
 using StacknQueue; 
-Console.WriteLine("Hello, World!");
 Stak<String> mytesty = new Stak<String>();
 mytesty.Peek(); 
 mytesty.Push("HELP");
