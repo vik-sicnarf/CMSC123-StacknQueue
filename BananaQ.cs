@@ -23,7 +23,7 @@ namespace StacknQueue
             Console.WriteLine("Element to be added: " +data); //For testing the method
         }
 
-        public T Dequeue()
+        public T? Dequeue()
         {
             // implement removing from a queue
             
@@ -32,7 +32,7 @@ namespace StacknQueue
             }
 
             //Store the front to a temporary node and moves front one node ahead
-            T data = front.Data;
+            T? data = front.Data;
             front = front.Next;
 
             if(front == null){ //In case of all node being dequeued, set rear to null
