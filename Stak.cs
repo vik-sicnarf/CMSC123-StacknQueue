@@ -23,15 +23,17 @@ namespace StacknQueue
 
         public T Pop() //Removing element from the top of the stack
         {
-            //Exception handling for pop when the stack is empty
-            try {
+            //Checks if the stack is empty before popping 
+            if (top != null){
                 T data = top.Data; 
                 top = top.Next;
+                Console.WriteLine("Element popped from stack: "+ data);
                 return data;
-            }catch(NullReferenceException e){ //Catches the exception when the stack is empty and returns null
+            }else{
                 Console.WriteLine("The stack is empty");
                 return default(T); //returns null
             }
+           
                 
     
             
@@ -39,8 +41,7 @@ namespace StacknQueue
 
         public T Peek() //Peeking from the top of the stack
         {
-            //Exception handling for peeking when the stack is empty
-
+            //Checks if the stack is empty before peeking 
             if(top != null){
                 Console.WriteLine("Peeking the stack the element at the top is: " + top.Data);
                 return top.Data; 

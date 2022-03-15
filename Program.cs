@@ -12,6 +12,10 @@ mytesty.Peek();
 mytesty.printMystack(); 
 mytesty.Pop();
 mytesty.Pop();
+mytesty.Pop();
+mytesty.Pop();
+mytesty.Pop();
+mytesty.Pop();
 mytesty.Peek(); 
 
 BananaQ<String> mytesty2 = new BananaQ<string>();
