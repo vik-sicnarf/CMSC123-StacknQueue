@@ -6,11 +6,8 @@ namespace StacknQueue
         public Stak(){
             top = null;
         }
-        public void Push(T data)
+        public void Push(T data) //Pushing to the stack
         {
-            // implement adding to the stack
-            //Allocate Memory for new node 
-            //Add the data 
             Console.WriteLine("Element to be added: "+data); //FOR TESTING TO SEE IF ELEMENT TO BE ADDED IS RIGHT 
 
             Node<T>? TopNow = top; //defines a temp variable node that is the Current Top of the stack  
@@ -24,10 +21,8 @@ namespace StacknQueue
 
         }
 
-        public T Pop() //void return type for now. change to T when done implementing 
+        public T Pop() //Removing element from the top of the stack
         {
-            //Implement removing element from the top of the stack
-
             //Exception handling for pop when the stack is empty
             try {
                 T data = top.Data; 
@@ -42,11 +37,8 @@ namespace StacknQueue
             
         }
 
-        public T Peek() //void return type for now. change to T when done implementing 
+        public T Peek() //Peeking from the top of the stack
         {
-            //implement peeking from the top of the stack
-            //Returns element at the top of the stack 
-
             //Exception handling for peeking when the stack is empty
             try{ //Returns the top element since the stack is not empty 
                 Console.WriteLine("Peeking the stack the element at top is: " + top.Data);
@@ -55,8 +47,6 @@ namespace StacknQueue
                 Console.WriteLine("Peeking the stack the element at top is empty");
                 return default(T); //returns null
             }
-           
-            
         }
 
         
