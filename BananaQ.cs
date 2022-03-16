@@ -20,6 +20,7 @@ namespace StacknQueue
                 rear.Next = newElement;
                 rear = newElement;
             }
+            //rear.Next = front; //Circular Linked List
             Console.WriteLine("Element to be added: " +data); //For testing the method
         }
 
@@ -30,6 +31,19 @@ namespace StacknQueue
             if(front == null){ //For empty queue, method will throw exception
                 throw new NullReferenceException("The queue is empty");
             }
+
+            // Circular Linked List
+            // T? data;
+            // if (front == rear) {
+            //     data = front.Data;
+            //     front = null;
+            //     rear = null;
+            // } else {
+            //     Node<T> temp = front;
+            //     data = temp.Data;
+            //     front = front.Next;
+            //     rear.Next = front;
+            // }
 
             //Store the front to a temporary node and moves front one node ahead
             T? data = front.Data;
@@ -46,6 +60,10 @@ namespace StacknQueue
         public void printMyQueue()
         {
             Node<T>? current = front;
+
+            if (current == null) {
+                Console.WriteLine("The queue is empty");
+            }
             
             while(current != null) {
                 Console.WriteLine(current.Data);
