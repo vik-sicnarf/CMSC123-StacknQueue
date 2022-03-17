@@ -26,7 +26,7 @@ namespace StacknQueue
         public T? Dequeue() //Method to remove from the queue 
         {
             if(front == null){ //For empty queue, method will throw exception
-                throw new NullReferenceException("The queue is empty");
+                throw new NullReferenceException("Queue is empty");
             }
 
             //Store the front to a temporary node and moves front one node ahead
@@ -46,12 +46,18 @@ namespace StacknQueue
             Node<T>? current = front;
             if (current == null) {
                 Console.WriteLine("The queue is empty");
+            } else{
+                Console.WriteLine("Singly Queue:");
+                while(current != null) {
+                    Console.WriteLine(current.Data);
+                    current = current.Next;
+                }
+                //To test that difference to a circular linked list:
+                // Console.WriteLine("The front data is: " + front.Data);
+                // Console.WriteLine("The data next to rear is: " + rear.Next.Data);
             }
             
-            while(current != null) {
-                Console.WriteLine(current.Data);
-                current = current.Next;
-            }
+            
         }
     }
 }
