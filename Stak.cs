@@ -2,23 +2,21 @@ namespace StacknQueue
 {
     public class Stak<T>
     {
-        private Node<T>? top;
+        private Node<T>? top; //Node for the top
         public Stak(){
             top = null;
         }
         public void Push(T data) //Pushing to the stack
         {
-            Console.WriteLine("Element to be added: "+data); //FOR TESTING TO SEE IF ELEMENT TO BE ADDED IS RIGHT 
+            Console.WriteLine("Element to be added: "+data); //For testing
 
-            Node<T>? TopNow = top; //defines a temp variable node that is the Current Top of the stack  
+            Node<T>? TopNow = top; //Defines a temp variable node that is the Current Top of the stack  
 
-            // declares the new node as the top and Sets Next as the node that was previously at the top of the stack
+            // Declares the new node as the top and Sets Next as the node that was previously at the top of the stack
             top = new Node<T>(data)
             {
                 Next = TopNow    
             }; 
-            
-
         }
 
         public T? Pop() //Removing element from the top of the stack
@@ -33,10 +31,6 @@ namespace StacknQueue
                 Console.WriteLine("The stack is empty");
                 return default(T); //returns null
             }
-           
-                
-    
-            
         }
 
         public T? Peek() //Peeking from the top of the stack
@@ -47,15 +41,14 @@ namespace StacknQueue
                 return top.Data; 
             }else{
                 Console.WriteLine("Peeking the stack the element at top is empty");
-                return default(T); 
+                return default(T); //returns null if stack is empty
             }
         }
 
         
-        public void printMystack(){ //METHOD TO PRINT THE STACK (FOR TESTING PURPOSES) TO BE TESTED IF THIS WORKS 
+        public void printMystack(){ //Method to print the stack //For testing purposes
             Node<T>? current = top; 
             while(current != null){
-                    
                     Console.WriteLine(current.Data);
                     current = current.Next;
             }

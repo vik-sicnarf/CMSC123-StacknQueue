@@ -2,48 +2,32 @@ namespace StacknQueue
 {
     public class BananaQ<T>
     {
-        private Node<T>? front;
-        private Node<T>? rear;
+        private Node<T>? front; //Node for the front
+        private Node<T>? rear; //Node for the rear 
 
         public BananaQ() {
             front = rear = null;
         }
 
-        public void Enqueue(T data)
+        public void Enqueue(T data) //Method for adding to queue
         {
-            //implement adding to queue
             Node<T>? newElement = new Node<T>(data);
 
-            if(rear == null) { //For empty queue, front and rear are both the new node
+            if(rear == null) {      //For empty queue, front and rear are both the new node
                 front = rear = newElement;
             } else { //Adds new node to the end of the queue, changing the rear node
                 rear.Next = newElement;
                 rear = newElement;
             }
-            //rear.Next = front; //Circular Linked List
+            
             Console.WriteLine("Element to be added: " +data); //For testing the method
         }
 
-        public T? Dequeue()
+        public T? Dequeue() //Method to remove from the queue 
         {
-            // implement removing from a queue
-            
             if(front == null){ //For empty queue, method will throw exception
                 throw new NullReferenceException("The queue is empty");
             }
-
-            // Circular Linked List
-            // T? data;
-            // if (front == rear) {
-            //     data = front.Data;
-            //     front = null;
-            //     rear = null;
-            // } else {
-            //     Node<T> temp = front;
-            //     data = temp.Data;
-            //     front = front.Next;
-            //     rear.Next = front;
-            // }
 
             //Store the front to a temporary node and moves front one node ahead
             T? data = front.Data;
@@ -57,10 +41,9 @@ namespace StacknQueue
             return data;
         }
 
-        public void printMyQueue()
+        public void printMyQueue() //Method for printing the queue //For testing
         {
             Node<T>? current = front;
-
             if (current == null) {
                 Console.WriteLine("The queue is empty");
             }
