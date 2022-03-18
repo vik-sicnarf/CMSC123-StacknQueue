@@ -30,14 +30,14 @@ mytesty2.Dequeue();
 //mytesty2.Dequeue(); //test Dequeue throw Exception
 mytesty2.printMyQueue();
 
-// BananaQnaBilog<String> mytesty3 = new BananaQnaBilog<string>();
-// mytesty3.Enqueue("SANA");
-// mytesty3.Enqueue("GUMANA");
-// mytesty3.Enqueue("YUNG");
-// mytesty3.Enqueue("CODE");
-// mytesty3.Dequeue();
-// mytesty3.Dequeue();
-// //mytesty3.Dequeue();
-// //mytesty3.Dequeue();
-// //mytesty3.Dequeue(); //test Dequeue throw Exception
-// mytesty3.printMyQueue();
+BananaQnaBilog<String> mytesty3 = new BananaQnaBilog<string>();
+mytesty3.Enqueue("SANA");
+mytesty3.Enqueue("GUMANA");
+mytesty3.Enqueue("YUNG");
+mytesty3.Enqueue("CODE");
+mytesty3.Dequeue();
+mytesty3.Dequeue();
+//mytesty3.Dequeue();
+//mytesty3.Dequeue();
+//mytesty3.Dequeue(); //test Dequeue throw Exception
+mytesty3.printMyQueue();
